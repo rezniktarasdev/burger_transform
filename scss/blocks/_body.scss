@@ -1,0 +1,58 @@
+body {
+   font-family: 'Lato', sans-serif;
+   background-color: $color02;
+   color: $color06;
+   overflow-x: hidden;
+   margin: 0;
+}
+
+.container {
+   background: url(https://img.freepik.com/free-photo/white-watercolor-papar-texture-background-for-cover-card-design-or-overlay-aon-paint-art-background_1962-2191.jpg?size=626&ext=jpg&ga=GA1.2.1491052253.1624838400) no-repeat center/cover;
+   transform-origin: top left;
+   transition: transform 0.5s linear;
+   width: 100vw;
+   min-height: 100vh;
+   padding: 50px;
+}
+
+.container.show-nav {
+   transform: rotate(-20deg);
+}
+
+.content_img {
+   max-width: 100%;
+   padding-bottom: 20px;
+}
+
+.content {
+   max-width: 1000px;
+   margin: 50px auto;
+}
+
+.content_title {
+   font-size: 2.4rem;
+   text-transform: uppercase;
+   margin: 0;
+   padding-bottom: 10px;
+   color:$color11;
+}
+
+.content_subtitle{
+   font-size: 1.8rem;
+   text-transform: uppercase;
+   margin: 0;
+   padding-bottom: 10px;
+   color:$color11;
+}
+
+.content small {
+   color: #555;
+   font-style: italic;
+}
+
+.content_text {
+   color: #333;
+   line-height: 1.5;
+   font-size: 1.6rem;
+   padding-bottom: 10px;
+}

@@ -6,8 +6,8 @@ var gulp = require('gulp'),
 	browserSync = require("browser-sync"),
 	iconfontCss = require('gulp-iconfont-css');
 
-gulp.task('iconfont', function(){
-	var runTimestamp = Math.round(Date.now()/1000);
+gulp.task('iconfont', function () {
+	var runTimestamp = Math.round(Date.now() / 1000);
 
 	return gulp.src(['./img/icons/*.svg'])
 		.pipe(iconfontCss({
@@ -15,7 +15,7 @@ gulp.task('iconfont', function(){
 			path: './scss/utils/_icons_template.scss',
 			targetPath: '../scss/utils/_icons.scss',
 			fontPath: '../fonts/',
-			firstGlyph: 0xf120 
+			firstGlyph: 0xf120
 		})).pipe(iconfont({
 			fontName: 'iconfont',
 			formats: ['svg', 'ttf', 'eot', 'woff', 'woff2'],
@@ -38,14 +38,14 @@ gulp.task('tinypng', function () {
 
 gulp.task('scss', function () {
 	return gulp.src('./scss/**/*.scss')
-		.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+		.pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
 		.pipe(autoprefixer(
 			["last 30 versions"]
 		))
 		.pipe(gulp.dest('./css/'));
 });
 
-gulp.task("reload", function(done) {
+gulp.task("reload", function (done) {
 	browserSync.create()
 	browserSync.init({
 		server: "./"

@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body, p, ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFC83D;
+  color: #1B1B1B;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background: url(https://img.freepik.com/free-photo/white-watercolor-papar-texture-background-for-cover-card-design-or-overlay-aon-paint-art-background_1962-2191.jpg?size=626&ext=jpg&ga=GA1.2.1491052253.1624838400) no-repeat center/cover;
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.show-nav {
+  -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.content_img {
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content_title {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 10px;
+  color: #1DA4FB;
+}
+
+.content_subtitle {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 10px;
+  color: #1DA4FB;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content_text {
+  color: #333;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #1DA4FB;
+  height: 200px;
+  width: 200px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  -webkit-transform: rotate(-70deg);
+      -ms-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.3s;
+       -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+.nav_list {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+.nav_item {
+  font-size: 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #1B1B1B;
+  margin: 40px 0;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  -o-transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+}
+
+.nav_item i {
+  font-size: 2rem;
+  margin-right: 10px;
+  color: #1DA4FB;
+}
+
+.nav_list li + li {
+  margin-left: 15px;
+  -webkit-transform: translateX(-150%);
+      -ms-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+.nav_list li + li + li {
+  margin-left: 30px;
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
